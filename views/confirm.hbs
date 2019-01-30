@@ -1,0 +1,45 @@
+<body style="background-color:rgb(155, 174, 236)">
+
+    <form class="form-signin" action="/dashboard" method="POST">
+        <a href="/">
+            <img class="mb-4" src="/images/tulips.jpg" alt="" width="72" height="72">
+        </a>
+        {{#if error}}
+        <div class="alert alert-danger" role="alert">
+            {{#each messages}}
+            {{this}}
+            <br>
+            {{/each}}
+        </div>
+        {{/if}}
+
+        <div class="project-sidebar-block">
+            <div class="alert alert-success" role="alert">
+                <h1 class="alert-heading display-1">Thank you!</h1>
+                <br>
+                <hr>
+                <br>
+                <p>
+                    We have received your contact information.
+                </p>
+                <br>
+                <hr>
+                <br>
+                <p class="mb-0">
+                    <b>Name:</b> {{data.name}}
+                </p>
+                <p class="mb-0">
+                    <b>Email:</b> {{data.email}}
+                </p>
+                <p class="mb-0">
+                    <b>Mobile:</b> {{data.mobile}}
+                </p>
+                <p class="mb-0">
+                    <b>Description:</b> {{data.description}}
+                </p>
+            </div>
+           
+    
+            </form>
+        
+</body>

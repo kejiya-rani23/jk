@@ -1,0 +1,41 @@
+<body style="background-color:rgb(155, 174, 236)">
+    <form class="form-signin" action="/confirm" method="POST">
+        <a href="/">
+            <img class="mb-4" src="/images/tulips.jpg" alt="" width="72" height="72">
+        </a>
+        <h1 class="h3 mb-3 font-weight-normal">contact details</h1>
+        {{#if error}}
+        <div class="alert alert-danger" role="alert">
+            {{#each messages}}
+            {{this}}
+            <br>
+            {{/each}}
+        </div>
+        {{/if}}
+
+        <div class="form-label-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" class="form-control" placeholder="Name" autofocus required>
+        </div>
+
+        <div class="form-label-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" class="form-control" placeholder="Email address" required>
+        </div>
+
+        <div class="form-label-group">
+            <label for="mobile">Mobile</label>
+            <input type="number" name="mobile" id="mobile" class="form-control" placeholder="Mobile" required>
+        </div>
+
+        <div class="form-label-group">
+            <br>
+            <textarea name="description" id="description" rows="5" class="form-control" placeholder="Description"></textarea>
+        </div>
+
+        <div class="form-label-group">
+            <br>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+        </div>
+    </form>
+</body>
